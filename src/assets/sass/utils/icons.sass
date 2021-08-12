@@ -1,0 +1,117 @@
+.icon
+    background-position: center
+    background-size: contain
+    &--logo
+        width: 91px
+        height: 70px
+        background: url('../img/sprites/sprite.png') -281px -10px
+    &--address
+        width: 30px
+        height: 30px
+        background: url('../img/sprites/sprite.png') -10px -230px
+    &--time
+        width: 35px
+        height: 30px
+        background: url('../img/sprites/sprite.png') -198px -120px
+    &--phone
+        width: 30px
+        height: 30px
+        background: url('../img/sprites/sprite.png') -60px -230px
+    &--basket
+        width: 33px
+        height: 31px
+        background: url('../img/sprites/sprite.png') -198px -170px
+    &--sheep
+        width: 99px
+        height: 79px
+        background: url('../img/sprites/sprite.png') -162px -10px
+    &-actual
+        width: 75px
+        height: 90px
+        background: url('../img/sprites/sprite.png') -10px -120px
+    &--delivery
+        width: 132px
+        height: 90px
+        background: url('../img/sprites/sprite.png') -10px -10px
+    &--mark
+        width: 66px
+        height: 90px
+        background: url('../img/sprites/sprite.png') -281px -100px
+    &--support
+        width: 73px
+        height: 90px
+        background: url('../img/sprites/sprite.png') -105px -120px
+    &--hamburger
+        cursor: pointer
+        width: 2em
+        height: 2em
+        position: relative
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        background-color: transparent
+        outline: none
+        border: none
+        padding: 6px
+        .icon__line
+            width: 100%
+            height: 2px
+            background-color: var(--c-accent)
+            border-radius: 2px
+            transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+        &.active 
+            .icon__line
+                transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+                position: absolute
+                width: 80%
+                &:nth-of-type(1) 
+                    transform: rotate(-45deg)
+                    transition-delay: 0.1s
+                &:nth-of-type(2) 
+                    transform:  rotate(45deg)
+                    transition-delay: 0.1s
+        &:focus-visible 
+            outline: 2px solid var(--c-accent)
+@media (min-device-pixel-ratio: 2),(min-resolution: 2dppx)
+    .icon
+        &--logo
+            width: 181px
+            height: 140px
+            background: url('../img/sprites/sprite@2x.png') -512px -10px
+        &--address
+            width: 60px
+            height: 60px
+            background: url('../img/sprites/sprite@2x.png') -429px -290px
+        &--time
+            width: 70px
+            height: 60px
+
+            background: url('../img/sprites/sprite@2x.png') -354px -210px
+        &--phone
+            width: 60px
+            height: 60px
+            background: url('../img/sprites/sprite@2x.png') -10px -410px
+        &--basket
+            width: 65px
+            height: 62px
+            background: url('../img/sprites/sprite@2x.png') -344px -290px
+        &--sheep
+            width: 198px
+            height: 158px
+            background: url('../img/sprites/sprite@2x.png') -294px -10px
+        &-actual
+            width: 149px
+            height: 180px
+            background: url('../img/sprites/sprite@2x.png') -10px -210px
+        &--delivery
+            width: 264px
+            height: 180px
+            background: url('../img/sprites/sprite@2x.png') -10px -10px
+        &--mark
+            width: 131px
+            height: 180px
+            background: url('../img/sprites/sprite@2x.png') -512px -170px
+        &--support
+            width: 145px
+            height: 180px
+            background: url('../img/sprites/sprite@2x.png') -179px -210px

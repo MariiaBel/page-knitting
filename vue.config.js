@@ -1,5 +1,12 @@
 module.export = {
-    productionSourceMap: false,
+    productionSourceMap: true,
     assetsDir: 'assets',
-    filenameHashing: true
+    filenameHashing: true,
+    css: {
+        loaderOptions: {
+            sass: {
+                additionalData: `@import "~@/assets/sass/utils/vars.sass"`
+            }
+        }
+    }
 }
