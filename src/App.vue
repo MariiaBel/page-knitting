@@ -1,6 +1,6 @@
 <template lang="pug">
 <Header />
-body
+main.page
     <router-view />
 
 </template>
@@ -16,5 +16,7 @@ export default {
 </script>
 
 
-<style>
+<style lang="sass">
+.page
+    margin-top: 35px
 </style>

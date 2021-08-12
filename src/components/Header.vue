@@ -21,7 +21,7 @@ header.header
                         div +7 800 000 00 00
             router-link.header__top-basket(:to="{name: 'basket'}" area-label="Перейти в карзину")
                 .icon.icon--basket
-    .header__menu
+    .header__menu(:class="{ active:isActiveMenu }")
         button.icon.icon--hamburger.header__hamburger(area-label="открыть/закрыть главное меню" tabindex="0" @click="onClickHamburger" :class="{ active:isActiveMenu }")
             .icon__line
             .icon__line
@@ -50,6 +50,9 @@ export default {
 
 <style lang="sass" >
 .header
+    padding-top: 10px
+    position: relative
+    z-index: 2
     &__logo
         margin: 0 auto
     &__top
@@ -61,19 +64,24 @@ export default {
             display: grid
             grid-template-columns: 60px 1fr
             align-items: center
+            margin-top: 20px
             &-icon
-                transform: scale(0.5)
+                transform: scale(0.8)
         &-basket
             position: fixed
-            top: -10px
-            right: 0
-            transform: scale(0.4)
+            top: 5px
+            right: 15px
+            transform: scale(0.8)
+            z-index: 3
     &__menu 
         overflow-y: hidden
         position: fixed
         top: 0
         width: 100%
-
+        height: 50px
+        transition: height 1s 
+        &.active
+            height: 100%
     &__nav
         background: var(--c-accent)
         font-weight: 700
@@ -121,8 +129,6 @@ export default {
             overflow: initial
         &__logo
             margin: 0
-        .header__hamburger
-            display: none
         &__nav
             padding: 0
             transform: none
@@ -143,7 +149,7 @@ export default {
                 align-items: center
                 grid-template-columns: 2fr 9fr 1fr
                 column-gap: 30px
-                padding-top: 30px
+                padding-top: 20px
                 padding-bottom: 20px
             &-list
                 display: flex
@@ -154,9 +160,13 @@ export default {
             &-item
                 flex-direction: row
                 text-align: left
+                margin-top: 0
                 &-icon
                     transform: none
                     margin-right: 15px
+        
+        .header__hamburger
+            display: none
 // @include media-to('xlg')
 
 </style>
