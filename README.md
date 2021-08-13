@@ -1,4 +1,4 @@
-# vue3-page-knitting
+# page-knitting
 
 ## Project setup
 ```
