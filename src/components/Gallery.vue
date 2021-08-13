@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import { galleryItems } from '@/_config'
+import { galleryItems } from '@/_data'
 export default {
     data() {
         return {
@@ -111,6 +111,7 @@ export default {
             background-color: white
             padding: 0
             border: none
+            cursor: pointer
             &.active, &:hover
                 background-color: var(--c-accent)
     &__toggle
@@ -146,7 +147,7 @@ export default {
             background-color: var(--c-accent)
             border-color: white
             &::after
-                border-color: white        
+                border-color: white
         &:focuse-visible
             outline: 2px solid var(--c-accent)
 @media screen and (min-width: 768px)

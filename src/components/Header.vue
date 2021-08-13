@@ -32,7 +32,7 @@ header.header
 </template>
 
 <script>
-import { navLinks } from '../_config'
+import { navLinks } from '../_data'
 export default {
     data() {
         return {

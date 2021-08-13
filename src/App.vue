@@ -18,5 +18,5 @@ export default {
 
 <style lang="sass">
 .page
-    margin-top: 35px
+    margin-top: 25px
 </style>
