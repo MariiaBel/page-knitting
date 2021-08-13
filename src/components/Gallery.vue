@@ -104,7 +104,7 @@ export default {
         z-index: 1
         list-style: none
         &-btn
-            display: block            
+            display: block
             width: 10px
             height: 10px
             border-radius: 50%
