@@ -1,63 +1,65 @@
 import HomePage from '@/pages/Home.vue'
 import Err404Page from '@/pages/404.vue'
+
+import vueConfig from "@/../vue.config"
 export const routes = [
     {
-        path: '',
+        path: vueConfig.publicPath,
         name: "home",
         component: HomePage
     },
     {
-        path: '/about',
+        path: `${vueConfig.publicPath}about`,
         name: "about",
         component: HomePage
     },
     {
-        path: '/yarn',
+        path: `${vueConfig.publicPath}yarn`,
         name: "yarn",
         component: HomePage
     },
     {
-        path: '/spokes',
+        path: `${vueConfig.publicPath}spokes`,
         name: "spokes",
         component: HomePage
     },
     {
-        path: '/hooks',
+        path: `${vueConfig.publicPath}hooks`,
         name: "hooks",
         component: HomePage
     },
     {
-        path: '/accessories',
+        path: `${vueConfig.publicPath}accessories`,
         name: "accessories",
         component: HomePage
     },
     {
-        path: '/certificates',
+        path: `${vueConfig.publicPath}certificates`,
         name: "certificates",
         component: HomePage
     },
     {
-        path: '/mk',
+        path: `${vueConfig.publicPath}mk`,
         name: "mk",
         component: HomePage
     },
     {
-        path: '/models',
+        path: `${vueConfig.publicPath}models`,
         name: "models",
         component: HomePage
     },
     {
-        path: '/basket',
+        path: `${vueConfig.publicPath}basket`,
         name: "basket",
         component: HomePage
     },
     {
-        path: `/404`,
+        path: `${vueConfig.publicPath}404`,
         name: '404',
         component: Err404Page
     },
     {
-        path: `/:CatchAll(.*)*`,
+        path: `${vueConfig.publicPath}:CatchAll(.*)*`,
         redirect: { name: '404' }
     }
 ]
